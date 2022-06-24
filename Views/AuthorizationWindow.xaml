@@ -1,0 +1,27 @@
+﻿<Window x:Class="FabricsShop.Views.AuthorizationWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FabricsShop.Views"
+        mc:Ignorable="d"
+        Title="Авторизация" Height="450" Width="329" MinHeight="450" MinWidth="329" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <StackPanel Background="#76e383"/>
+        <Label Content="Окно авторизации" FontSize="17" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" Style="{StaticResource StandardLabel}"/>
+        <Image Source="\Resources\logo.png" HorizontalAlignment="Left"/>
+        <Label Content="Логин" HorizontalAlignment="Left" VerticalAlignment="Bottom" Grid.Row="1" Margin="20,0,0,0" Style="{StaticResource StandardLabel}"/>
+        <TextBox x:Name="loginTextBox" Grid.Row="2" VerticalAlignment="Top" Margin="20,0,20,0" Style="{StaticResource StandardtextBox}"/>
+        <Label Content="Пароль" HorizontalAlignment="Left" VerticalAlignment="Bottom" Grid.Row="2" Margin="20,0,0,0" Style="{StaticResource StandardLabel}"/>
+        <TextBox x:Name="passwordTextBox" Grid.Row="3" VerticalAlignment="Top" Margin="20,0,20,0" Style="{StaticResource StandardtextBox}"/>
+        <Button x:Name="enterButton" Content="Войти" Grid.Row="3" VerticalAlignment="Bottom" Margin="50,0,50,0" Style="{StaticResource StandardButton}" Click="enterButton_Click" />
+        <Button x:Name="backButton" Content="Назад" HorizontalAlignment="Right" Style="{StaticResource StandardButton}" Click="backButton_Click" />
+    </Grid>
+</Window>

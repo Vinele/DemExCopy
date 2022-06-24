@@ -1,0 +1,36 @@
+﻿<Window x:Class="FabricsShop.Views.StoreWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FabricsShop.Views"
+        mc:Ignorable="d"
+        Title="Список товаров" Height="450" Width="800" Loaded="Window_Loaded" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <StackPanel Background="#76e383"/>
+        <Label Content="Список товаров" FontSize="17" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" Style="{StaticResource StandardLabel}"/>
+        <Image Source="\Resources\logo.png" HorizontalAlignment="Left"/>
+        <Button x:Name="backButton" Content="Назад" HorizontalAlignment="Right" Style="{StaticResource StandardButton}" Click="backButton_Click" />
+        <DataGrid x:Name="DataGridProduct" AutoGenerateColumns="False" Grid.Row="1">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Артикль" Binding="{Binding ProductArticleNumber}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Название" Binding="{Binding ProductName}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Описание" Binding="{Binding ProductDescription}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Категория" Binding="{Binding CategoryID}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Производитель" Binding="{Binding ManufacturerID}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Стоимость" Binding="{Binding ProductCost}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Сумма скидки" Binding="{Binding ProductDiscountAmount}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Кол-во на складе" Binding="{Binding ProductQuantityInStock}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Статус" Binding="{Binding StatusID}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Поставщик" Binding="{Binding SupplierID}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Единица" Binding="{Binding MeasureID}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Максимальная скидка" Binding="{Binding ProductMaxDiscount}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Фото" Binding="{Binding ProductPhotoName}"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>
